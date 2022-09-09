@@ -9,14 +9,21 @@
  */
 int main(void)
 {
-	char c = 'z';
+int s;
 
-	while (c >= 'a')
-	{
-		putchar(c);
-		c++;
-	}
+s = 122;
 
-	putchar('\n');
-	return (0);
+while (s >= 97)
+
+{
+
+	putchar(s);
+
+	s--;
+
+}
+
+putchar('\n');
+
+return (0);
 }
