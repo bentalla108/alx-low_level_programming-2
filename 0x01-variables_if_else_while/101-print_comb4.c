@@ -1,29 +1,49 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
- * main - Prints 3 combination of numbers
- * Return: Always (Success)
+ * main - main block
+ * Description: Write a program that prints all possible
+ * Different combinations of two digits
+ * Numbers must be separated by ,, followed by a space
+ * The two digits must be different
+ * 01 and 10 are considered the same combination of the two digits 0 and 1
+ * Print only the smallest combination of two digits
+ * Numbers should be printed in ascending order, with two digits
+ * You can only use the putchar function
+ * Every other function (printf, puts, etc…) is forbidden
+ * You can only use putchar five times maximum in your code
+ * You are not allowed to use any variable of type char
+ * All your code should be in the main function
+ * Return: 0
  */
 int main(void)
 {
-	int c, i, k;
-
-	for (c = '0'; c <= '9'; c++)
+	int c, d, e = 0;
+	while (e < 10)
 	{
-		for (i = '0'; i <= '9'; i++)
+		d = 0;
+		while (d < 10)
 		{
-			if (c < i && i < k)
+			c = 0;
+			while (c < 10)
 			{
-				putchar(c);
-				putchar(i);
-				putchar(k);
-
-				if (c != '7')
+				if (c != d && d != e && e < d && d < c)
 				{
-					putchar(',');
-					putchar(' ');
+					putchar('0' + e);
+					putchar('0' + d);
+					putchar('0' + c);
+
+					if (c + d + e != 9 + 8 + 7)
+					{
+						putchar(',');
+						putchar(' ');
+					}
 				}
+				c++;
 			}
+			d++;
 		}
+		e++;
 	}
 	putchar('\n');
 	return (0);
