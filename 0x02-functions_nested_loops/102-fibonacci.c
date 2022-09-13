@@ -7,25 +7,26 @@
  */
 int main(void)
 {
-	long int a, b, c, n;
+	int c = 2;
+	long int i = 1, j = 2;
+	long int k;
 
-	b = 1;
-
-	c = 2;
-
-	for (a = 1; a <= 50; ++a)
+	printf("%lu, ", i);
+	while (c <= 50)
 	{
-		if (b != 20365011074)
+		if (c == 50)
 		{
-			printf("%ld, ", b);
+			printf("%lu\n", j);
 		}
 		else
 		{
-			printf("%ld\n", b);
+			printf("%lu, ", j);
 		}
-		n = b + c;
-		b = c;
-		c = n;
+
+		k = j;
+		j += i;
+		i = k;
+		c++;
 	}
 
 	return (0);
