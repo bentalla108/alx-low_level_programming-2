@@ -15,12 +15,12 @@ int _abs(int x)
 	{
 		return (x * (-1));
 	}
-	else if(x == 0)
+	else if (x == 0)
 	{
 		return (0);
 	}
 	else
 	{
-		return x;
+		return (x);
 	}
 }
