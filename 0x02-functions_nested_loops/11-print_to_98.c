@@ -20,6 +20,6 @@ void print_to_98(int x)
 	{
 		for (x = x; x > 98; x--)
 			printf("%d, ", x);
-		printf("%d\x", 98);
+		printf("%d\n", 98);
 	}
 }
