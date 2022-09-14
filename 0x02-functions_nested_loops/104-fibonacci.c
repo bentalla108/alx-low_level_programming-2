@@ -1,9 +1,8 @@
 #include <stdio.h>
-
 /**
- * main - finds and prints the first 98 Fibonacci numbers, 
- * starting with 1 and 2
- * followed by a new line
+ * main - main block
+ * Description: Print the sum of even Fibonacci numbers up to a fib value
+ * not exceeding 4,000,000.
  * Return: 0
  */
 int main(void)
