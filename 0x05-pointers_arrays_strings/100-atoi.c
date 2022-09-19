@@ -10,18 +10,27 @@
 
 int _atoi(char *z)
 {
-	unsigned int n = 0, j;
-	int s = 1;
+	unsigned int count = 0, size = 0, o = 0, p = 1, m = 1, i;
 
-	for (j = 0; z[j] != '\0'; j++)
+	while (*(s + count) != '\0')
 	{
-		if (is_numerical(z[j]))
-			n = (z[j] - 48) + n * 10;
-		if (z[j + 1] == ' ')
+		if (size > 0 && (*(s + count) < '0' || *(s + count) > '9'))
 			break;
-		else if (z[j] == '-')
-			s *= -1;
+		if (*(s + count) == '-')
+			p *= -1;
+		if ((*(s + count) >= '0') && (*(s + count) <= '9'))
+		{
+			if (size > 0)
+				m *= 10;
+			size++;
+		}
+		count++;
 	}
 
-	return (n * s);
+	for (i = count - size; i < count; i++)
+	{
+		o = o + ((*(s + i) - 48) * m);
+		m /= 10;
+	}
+	return (o * p);
 }
