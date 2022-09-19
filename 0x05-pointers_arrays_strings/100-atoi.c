@@ -3,12 +3,12 @@
 /**
  * _atoi - convert a string to an integer
  *
- * @z: String
+ * @s: String
  *
  * Return: Return the number
  */
 
-int _atoi(char *z)
+int _atoi(char *s)
 {
 	unsigned int count = 0, size = 0, o = 0, p = 1, m = 1, i;
 
