@@ -23,7 +23,7 @@ void print_number(int n)
 	b = a;
 	x = 1;
 
-	while (b < 9)
+	while (b > 9)
 	{
 		b /= 10;
 		x *= 10;
