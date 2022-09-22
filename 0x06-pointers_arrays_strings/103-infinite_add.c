@@ -22,12 +22,15 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 
 	while (*(n1 + a) != '\0')
 		a++;
+
 	while (*(n2 + b) != '\0')
 		b++;
+
 	if (a >= b)
 		g = a;
 	else
 		g = b;
+
 	if (size_r <= g + 1)
 		return (0);
 	r[g + 1] = '\0';
@@ -36,6 +39,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	size_r--;
 	c = *(n1 + a) - 48;
 	d = *(n2 + b) - 48;
+
 	while (g >= 0)
 	{
 		o = c + d + add;
@@ -43,10 +47,12 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			add = o / 10;
 		else
 			add = 0;
+
 		if (o > 0)
 			*(r + g) = (o % 10) + 48;
 		else
 			*(r + g) = '0';
+
 		if (a > 0)
 		{
 			a--;
@@ -54,6 +60,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		}
 		else
 			c = 0;
+
 		if (b > 0)
 		{
 			b--;
@@ -61,9 +68,11 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		}
 		else
 			d = 0;
+
 		g--;
 		size_r--;
 	}
+
 	if (*(r) == '0')
 		return (r + 1);
 	else
