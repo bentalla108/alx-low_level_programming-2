@@ -17,8 +17,7 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int a = 0, b = 0, add = 0;
-	int o, g, c, d;
+	int a = 0, b = 0, add = 0, o, g, c, d;
 
 	while (*(n1 + a) != '\0')
 		a++;
