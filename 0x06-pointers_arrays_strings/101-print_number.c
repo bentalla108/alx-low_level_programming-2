@@ -5,12 +5,12 @@
  *
  * @n: input integer
  *
- * Return: void
+ * Return: no return
  */
 
 void print_number(int n)
 {
-	unsigned int a, b, x = 1;
+	unsigned int a, b;
 
 	if (n < 0)
 	{
@@ -21,6 +21,7 @@ void print_number(int n)
 		a = n;
 
 	b = a;
+	x = 1;
 
 	while (b < 9)
 	{
