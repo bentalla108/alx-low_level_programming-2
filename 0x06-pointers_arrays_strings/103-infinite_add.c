@@ -34,7 +34,8 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	a--;
 	b--;
 	size_r--;
-	c = *(n1 + a) - 48, d = *(n2 + b) - 48;
+	c = *(n1 + a) - 48;
+	d = *(n2 + b) - 48;
 	while (g >= 0)
 	{
 		o = c + d + add;
@@ -47,14 +48,21 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		else
 			*(r + g) = '0';
 		if (a > 0)
-			a--, c = *(n1 + a) - 48;
+		{
+			a--;
+			c = *(n1 + a) - 48;
+		}
 		else
 			c = 0;
 		if (b > 0)
-			b--, d = *(n2 + b) - 48;
+		{
+			b--;
+			d = *(n2 + b) - 48;
+		}
 		else
 			d = 0;
-		g--, size_r--;
+		g--;
+		size_r--;
 	}
 	if (*(r) == '0')
 		return (r + 1);
