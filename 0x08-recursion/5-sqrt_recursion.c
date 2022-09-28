@@ -3,7 +3,7 @@
 int _sqrt(int, int);
 
 /**
- * _evaluate - evaluate function sqrt
+ * _sqrt_recursion -> sqrt using recursion
  *
  * @i: interger
  *
