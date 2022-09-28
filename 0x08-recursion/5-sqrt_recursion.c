@@ -1,5 +1,7 @@
 #include "main.h"
 
+int _sqrt(int, int);
+
 /**
  * _evaluate - evaluate function sqrt
  *
@@ -14,13 +16,23 @@ int _sqrt_recursion(int n)
 {
 	return (_sqrt(n, 1));
 }
+/**
+ * _sqrt -> recursive square root
+ *
+ * @n: number
+ *
+ * @i: iterator
+ *
+ * Return: a number
+ */
+
 int _sqrt(int n, int i)
 {
-	if (n < 0)
+	int square = i * i;
+
+	if (square > n)
 		return (-1);
-	if ((i * i) > n)
-		return (-1);
-	if (i * i == n)
+	if (square == n)
 		return (i);
 	return (_sqrt(n, i + 1));
 }
