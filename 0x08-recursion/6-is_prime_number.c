@@ -1,35 +1,41 @@
 #include "main.h"
 
 /**
- * _sqrt -> recursive square root
+ * evaluate_num - recursion loop
  *
- * @n: number
+ * @num: num
  *
- * @i: iterator
+ * @iterator: number to iterate
  *
- * Return: a number
+ * Return: return 1 or 0
  */
 
-int _sqrt(int n, int i)
+int evaluate_num(int num, int iterator)
 {
-	int square = i * i;
-
-	if (square > n)
-		return (-1);
-	if (square == n)
-		return (i);
-	return (_sqrt(n, i + 1));
+	if (iterator == num - 1)
+		return (1);
+	else if (num % iterator == 0)
+		return (0);
+	if (num % iterator != 0)
+		return (evaluate_num(num, iterator + 1));
+	return (0);
 }
 
 /**
- * _sqrt_recursion -> sqrt using recursion
+ * is_prime_number - evaluate prime or not
  *
- * @n: parameter to be sqrt
+ * @num: number
  *
- * Return: square root of a number
+ * Return: return 1 prime - return 0 otherwise
  */
 
-int _sqrt_recursion(int n)
+int is_prime_number(int num)
 {
-	return (_sqrt(n, 1));
+	int i = 2;
+
+	if (num < 2)
+		return (0);
+	if (num == 2)
+		return (1);
+	return (evaluate_num(num, i));
 }
