@@ -5,8 +5,6 @@ int _sqrt(int, int);
 /**
  * _sqrt_recursion -> sqrt using recursion
  *
- * @i: interger
- *
  * @n: interger
  *
  * Return: evaluate sqrt
