@@ -2,21 +2,25 @@
 
 /**
  * array_range - creates an array of integers
+ * 
  * @min: minimum
+ * 
  * @max: maximum
+ * 
  * Return: array
  */
+
 int *array_range(int min, int max)
 {
-	int *arr, i = 0, t = min;
+	int *a, i = 0, x = min;
 
 	if (min > max)
 		return (0);
-	arr = malloc((max - min + 1) * sizeof(int));
+	a = malloc((max - min + 1) * sizeof(int));
 
-	if (!arr)
+	if (!a)
 		return (0);
 	while (i <= max - min)
-		arr[i++] = t++;
-	return (arr);
+		a[i++] = x++;
+	return (a);
 }
