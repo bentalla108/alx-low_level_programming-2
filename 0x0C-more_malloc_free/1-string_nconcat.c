@@ -2,15 +2,19 @@
 
 /**
  * string_nconcat - concatenates two strings.
+ * 
  * @s1: first string
+ * 
  * @s2: second string
+ * 
  * @n: index
+ * 
  * Return: char pointer
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *p;
+	char *x;
 	unsigned int size1 = 0, size2 = 0, i;
 
 	if (s1 == NULL)
@@ -31,21 +35,21 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (n > size2)
 	n = size2;
-	p = malloc((size1 + n + 1) * sizeof(char));
+	x = malloc((size1 + n + 1) * sizeof(char));
 
-	if (p == NULL)
+	if (x == NULL)
 		return (0);
 
 	for (i = 0; i < size1; i++)
 	{
-		p[i] = s1[i];
+		x[i] = s1[i];
 	}
 
 	for (; i < (size1 + n); i++)
 	{
-		p[i] = s2[i - size1];
+		x[i] = s2[i - size1];
 	}
-	p[i] = '\0';
+	x[i] = '\0';
 
-return (p);
+	return (x);
 }
