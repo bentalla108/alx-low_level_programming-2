@@ -1,10 +1,11 @@
 #include "variadic_functions.h"
+#include <stdarg.h>
+#include <stdio.h>
 
 /**
  * print_char - print a char
  *
- * @arg: a list of argument pointing
- *      to the character to be printed
+ * @arg: a list of argument pointing to the character to be printed
  *
  * Return: nothing
  */
@@ -19,8 +20,7 @@ void print_char(va_list arg)
 /**
  * print_int - print an integer
  *
- * @arg: a list of argument pointing
- *      to the character to be printed
+ * @arg: a list of argument pointing to the character
  *
  * Return: nothing
  */
@@ -35,8 +35,7 @@ void print_int(va_list arg)
 /**
  * print_float - print a float
  *
- * @arg: a list of argument pointing
- *      to the character to be printed
+ * @arg: a list of argument pointing to the character
  *
  * Return: nothing
  */
@@ -52,7 +51,6 @@ void print_float(va_list arg)
  * print_string - print a string
  *
  * @arg: a list of argument pointing
- *      to the character to be printed
  *
  * Return: nothing
  */
@@ -73,10 +71,8 @@ void print_string(va_list arg)
  * print_all - a function that prints anything
  *
  * @format: A string of character representing
- *          the argument types
  *
- * Description: If any argument not of type char,
- *              int, float or char * is ignored
+ * Description: If any argument not of type char
  *
  * Return: nothing
  */
