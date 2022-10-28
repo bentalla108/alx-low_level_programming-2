@@ -1,25 +1,36 @@
 #include "main.h"
 
+
 /**
- * flip_bits - counts the number of bits to change
- * to get from one number to another
- * @n: first number
- * @m: second number
+ *findbits - count number of bits to be flipped
  *
- * Return: number of bits to change
+ *@a:input
+ *
+ *Return: number of bits
  */
+
+unsigned int findbits(unsigned long int a)
+{
+long int i = 0;
+
+
+while (a)
+{
+i += a & 1;
+a >>= 1;
+}
+return (i);
+}
+
+/**
+ *flip_bits - bits need to flip from number to another
+ *@n: unsigned integer
+ *@m: unsigned integer
+ *
+ *Return: number of bit to flip
+ */
+
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-    int i, c = 0;
-    unsigned long int r;
-    unsigned long int e = n ^ m;
-
-    for (i = 63; i >= 0; i--)
-    {
-        r = e >> i;
-        if (r & 1)
-            c++;
-    }
-
-    return (c);
+return (findbits(n ^ m));
 }
